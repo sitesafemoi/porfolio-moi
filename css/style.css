@@ -1,0 +1,448 @@
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */    
+    scroll-behavior: smooth;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+    color: var(--blanco);
+}
+/*Variables*/
+:root {
+    --fuenteHeading: "Onest", sans-serif;
+    --fuenteParrafos: "Onest", sans-serif;
+    --primario:#7CEB5D;
+    --gradient:#8EE84D;
+    --secundario:rgb(161, 255, 20);
+    --gris: #e1e1e1;
+    --blanco: #ffffff;
+    --blanco-oscuro:#f9f9f9;
+    --blanco-bordes:#E1E1E1;
+    --negro: #000000;
+    --negro-claro:#292929;
+}
+
+
+/** Globales **/
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4 {
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+    color: var(--blanco);
+}
+h1 {
+    font-size: 4.8rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3.2rem;
+}
+h4 {
+    font-size: 2.8rem;
+}
+img {
+    border-radius: .5rem;
+    max-width: 100%;
+}
+
+
+img,.button {
+    border-radius: .5rem;
+}
+h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::selection,span::selection{
+    background-color: var(--primario);
+    color: var(--negro-claro);
+}
+
+/** Utilidades **/
+   
+.contenedor{
+    max-width: 80rem;
+    width: min(90%, 120rem);
+    margin:0 auto;
+}
+.centrar-texto{
+    text-align: center;
+}
+.margin-top{
+    margin-top: 2rem;
+}
+.margin-top-4{
+    margin-top: 4rem;
+}
+.margin-top-8{
+    margin-top: 8rem;
+}
+
+
+.margin-buttom{
+    margin-bottom: 6rem;
+}
+.text-brown{
+    color: var(--primario);
+}
+.color-primario{
+    color: var(--primario);
+}
+/*Black background*/
+
+.black-background{
+    position: absolute;
+    top:0;
+    z-index: -10;
+    height: 200rem;
+    width: 100%;
+    background-color: rgb(3 7 18 / 1);
+    background-image: radial-gradient(ellipse 80% 80% at 50% -20%,rgba(120,119,198,0.3),rgba(255,255,255,0));
+    background-repeat: no-repeat;
+} 
+
+/*Modo claro*//*
+.black-background{
+    position: absolute;
+    top:0;
+    z-index: -10;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(249 250 251 / 1);
+    background-image: radial-gradient(ellipse 80% 80% at 50% -20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9));
+}
+*/
+
+/* Estilos header */
+
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 4.5rem;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    z-index: 120;
+    
+}
+.header-nav{
+    background-color: #706d6d49;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5rem;
+    width: 30rem;
+    backdrop-filter: blur(1rem);
+}
+.header-nav ul{
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+.nav-a{
+    color: var(--blanco);
+    transition: all .2s ease;
+    display: inline-block;
+}
+.nav-a:hover{
+    color: var(--primario);
+    transform: scale(1.02);
+}
+
+/* Estilos para los links internos */
+#proyectos, #sobre-mi, #habilidades{
+    display: block;
+    padding-bottom: 6.5rem;
+}
+/* Estilos a la presentacion */
+
+
+/*----Animacion del titulo - H1 -----*/
+@keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  
+  @keyframes blink-caret {
+    50% {
+      border-color: transparent;
+    }
+  }
+  /* When you change the amount of characters in the h1, you have to change 
+  the with: 14ch and  steps(14, end), if there is 14 characters, put 14, 
+  if there is 20 put 20 */
+#h2-animation {
+    border-right: .1em solid var(--blanco);
+    width: 13.55ch;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 1s steps(21, end), blink-caret .6s step-end infinite alternate;
+}
+
+
+@media screen and (max-width:470px) {
+    #h2-animation {
+        font-size: 3.5rem;
+    }
+    
+}
+
+
+
+.cont-title{
+    margin-top: 10rem;
+}
+
+.cont-title p {
+    max-width: 45rem;
+}
+
+/* Socials botones */
+.cont-socials-buttons{
+    display: flex;
+    justify-content: space-between;
+    max-width: 43rem;
+}
+/* Boton de contacto */
+.button2 {
+    display: inline-block;
+    transition: all 0.3s ease-in;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #090909;
+    padding-left: .75rem;
+    cursor: pointer;
+    font-size: 1.78rem;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    width: 12rem;
+    height: 4rem;
+}
+
+.button2:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+    transform:scale(1.05);
+}
+
+.button2:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.9s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.button2:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.6s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.button2:hover {
+    color: var(--negro);
+    border: 1px solid var(--primario);
+    transition: all 0.2s ease;
+    transition: border 0.25s ease;
+}
+
+.button2:hover:before {
+    top: -35%;
+    background-color: var(--primario);
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button2:hover:after {
+    top: -45%;
+    background-color: var(--primario);
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+  
+
+/*Botones de Git y Linkedin*/
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 8rem;
+    height: 4rem;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 1.5rem #00000027;
+    padding: 1.5rem 1rem;
+    border-radius: .8rem;
+}
+.social-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 3rem;
+    border-radius: .8rem;
+    background-color: #fff;
+    box-shadow: 0 0 .4rem #00000027;
+    transition: 0.3s;
+}
+
+.social-button:hover {
+    background-color: #f2f2f2;
+    box-shadow: 0 0 .6rem .3rem #00000027;
+}
+
+.social-buttons svg {
+    transition: 0.3s;
+    height: 2rem;
+}
+
+.github {
+    background-color: #333;
+    margin-right: .3rem;
+}
+
+.github svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: #f2f2f2;
+}
+
+.github:hover svg {
+    fill: #333;
+}
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+.linkedin svg {
+    fill: #f2f2f2;
+}
+
+.linkedin:hover svg {
+    fill: #0077b5;
+}
+  
+/* Estilos area de los proyectos*/
+.cont-main{
+    margin-top: 25rem;
+}
+.cont-proyectos-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    place-content: center;
+    
+}
+/* Responsive cont Grid de los proyectos */
+@media screen and (max-width:760px) {   
+    .cont-proyectos-grid{
+        grid-template-columns: 35% 35%;
+        gap:4rem;
+        
+    }
+}
+@media screen and (max-width:670px) {
+    .cont-proyectos-grid{
+        grid-template-columns:100%;
+        width: min(55%, 20rem);
+        margin-inline: auto;
+    }
+    .card{
+        margin-bottom: 4rem;
+    }
+}
+
+/* Esilos Cards */
+
+.card {
+    width: 20rem;
+    height: 26.4rem;
+    transition: all 0.2s;
+    position: relative;
+    cursor: pointer;
+  }
+.card img{
+    position: absolute;
+    z-index: 100;
+    width: 95%;
+    margin:.5rem;
+
+}
+.card h5{
+    position: absolute;
+    z-index: 100;
+    top: 15rem;
+    left: 4rem;
+    font-size: 2rem;
+    color: var(--blanco);
+}
+  .card-inner {
+    width: inherit;
+    height: inherit;
+    background: rgba(255,255,255,.05);
+    box-shadow: 0 0 1rem rgba(0,0,0,0.25);
+    backdrop-filter: blur(1rem);
+    border-radius: .8rem;
+  }
+  
+  .card:hover {
+    transform: scale(1.04) rotate(1deg);
+  }
+  
+  .circle {
+    width: 10rem;
+    height: 10rem;
+    background: radial-gradient(#b0e633, #53ef7d);
+    border-radius: 50%;
+    position: absolute;
+    animation: move-up6 2s ease-in infinite alternate-reverse;
+  }
+  
+  .circle:nth-child(3){
+    top: -2.5rem;
+    left: -2.5rem;
+  }
+  
+  .circle:nth-child(2) {
+    bottom: -2.5rem;
+    right: -2.5rem;
+    animation-name: move-down1;
+  }
+  
+  @keyframes move-up6 {
+    to {
+      transform: translateY(-1rem);
+    }
+  }
+  
+  @keyframes move-down1 {
+    to {
+      transform: translateY(1rem);
+    }
+  }
