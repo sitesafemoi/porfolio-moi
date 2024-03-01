@@ -402,14 +402,22 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
     font-size: 2rem;
     color: var(--blanco);
 }
+.card p{
+    position: absolute;
+    z-index: 100;
+    top: 20rem;
+    left: 2rem;
+    color: var(--blanco);
+    line-height: 2.2rem;
+}
   .card-inner {
     width: inherit;
     height: inherit;
     background: rgba(255,255,255,.05);
     box-shadow: 0 0 1rem rgba(0,0,0,0.25);
-    backdrop-filter: blur(1rem);
-    border-radius: .8rem;
-  }
+    backdrop-filter: blur(1.5rem);
+    border-radius: .8rem;  
+}
   
   .card:hover {
     transform: scale(1.04) rotate(1deg);
