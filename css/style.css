@@ -108,6 +108,11 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
     background-repeat: no-repeat;
 } 
 
+@media screen and (max-width:760px) {   
+    .black-background{
+        height: 300rem;
+    } 
+}
 /*Modo claro*//*
 .black-background{
     position: absolute;
@@ -460,9 +465,10 @@ to {
 /* -- Estilos a SOBRE MI -- */
 
 .cont-grid-sobre-mi{
-    display: grid;
-    grid-template-columns: 75% 25%;
-    column-gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .card-img {
@@ -477,14 +483,28 @@ to {
     overflow: hidden;
     position: relative;
     padding:.2rem;
-    border-radius: .5rem;
+    border-radius: .8rem;
+    flex-basis: auto;
+}
+.cont-grid-sobre-mi article{
+    flex-basis: 70%;
+}
+@media screen and (max-width:761px) {
+    .card-img {
+        order: 1;
+        margin-inline: auto;
+    }
+    .cont-grid-sobre-mi article{
+        order:2;
+        margin-inline: auto;
+    }
 }
 .card-img img{
     position: relative;
     z-index: 100;
     width: 98%;
     height: 99%;
-
+    border-radius: .8rem;
 }
 .card-img::before {
     opacity: 0;
