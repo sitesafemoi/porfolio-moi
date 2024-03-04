@@ -69,7 +69,7 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
    
 .contenedor{
     max-width: 80rem;
-    width: min(90%, 120rem);
+    width: min(90%, 80rem);
     margin:0 auto;
 }
 .centrar-texto{
