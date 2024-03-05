@@ -85,6 +85,9 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
     margin-top: 8rem;
 }
 
+.h-100{
+    height: 100%;
+}
 
 .margin-buttom{
     margin-bottom: 6rem;
@@ -172,11 +175,23 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
 .cont-title{
     margin-top: 10rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 60% 40%;
+    height: 50rem;
+    gap: 1rem;
+}
+
+.svg-animation{
+    width: 100%;
+    height: 75%;
 }
 @media screen and (max-width:770px) {
     .cont-title{
+        height: 70rem;
         grid-template-columns: 1fr;
+        grid-template-rows: 60% 40%;
+    }
+    .svg-animation{
+        height: 100%;
     }
     
 }
@@ -185,11 +200,6 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
     max-width: 45rem;
 }
 
-.svg-animation{
-    width: 100%;
-    position: relative;
-    top: 0;
-}
 /* Animacion a los brazos y cabeza */
 #m1{
     animation: move-brazo1 .6s linear alternate infinite;
@@ -261,7 +271,6 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
     #h2-animation {
         font-size: 3.5rem;
     }
-    
 }
 
 
