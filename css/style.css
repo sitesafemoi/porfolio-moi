@@ -113,7 +113,7 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
 
 @media screen and (max-width:760px) {   
     .black-background{
-        height: 300rem;
+        height: 350rem;
     } 
 }
 /*Modo claro*//*
@@ -180,6 +180,10 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
     gap: 1rem;
 }
 
+.cont-title p {
+    max-width: 45rem;
+}
+
 .svg-animation{
     width: 100%;
     height: 75%;
@@ -193,13 +197,16 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
     .svg-animation{
         height: 100%;
     }
+    .cont-title p {
+        text-align: center;
+    }
     
 }
-
-.cont-title p {
-    max-width: 45rem;
-}
-
+@media screen and (max-width:455px) {   
+    .cont-title p {
+        text-align: left;
+    }
+}  
 /* Animacion a los brazos y cabeza */
 #m1{
     animation: move-brazo1 .6s linear alternate infinite;
@@ -242,6 +249,14 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
     animation: cuadros-1 .5s linear alternate-reverse infinite;
 }
 
+/* Contenedor de la presentacion */
+@media screen and (max-width:770px) {
+    .cont-presentacion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 /*----Animacion del titulo - H1 -----*/
 @keyframes typing {
@@ -278,7 +293,7 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
 .cont-socials-buttons{
     display: flex;
     justify-content: space-between;
-    max-width: 43rem;
+    width: min(100%, 43rem);
 }
 /* Boton de contacto */
 .button2 {
@@ -418,7 +433,7 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
   
 /* -- Estilos area de los proyectos -- */
 .cont-main{
-    margin-top: 25rem;
+    margin-top: 1rem;
 }
 .cont-proyectos-grid{
     width: 100%;
