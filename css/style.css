@@ -169,6 +169,69 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
 }
 /* Estilos a la presentacion */
 
+.cont-title{
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (max-width:770px) {
+    .cont-title{
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+.cont-title p {
+    max-width: 45rem;
+}
+
+.svg-animation{
+    width: 100%;
+    position: relative;
+    top: 0;
+}
+/* Animacion a los brazos y cabeza */
+#m1{
+    animation: move-brazo1 .6s linear alternate infinite;
+}
+#m2{
+    animation: move-brazo2 .6s linear alternate-reverse infinite;
+}
+#head{
+    animation: move-head .9s linear alternate-reverse infinite;
+}
+@keyframes move-brazo1 {
+    from {
+        transform:translateX(.5rem)
+    }
+}
+@keyframes move-brazo2 {
+    from {
+        transform:translateX(-.5rem)
+    }
+}
+@keyframes move-head {
+    from {
+        transform:translateY(.5rem)
+    }
+}
+ /* Animacion cuadros */
+#Vector_14, #Vector_22,#Vector_29,#Vector_48,#Vector_43{
+    animation: cuadros-1 .6s linear alternate infinite ;
+}
+
+@keyframes cuadros-1 {
+    from {
+        fill: var(--blanco);
+    }
+    to{
+        fill: var(--primario);
+    }
+}
+#Vector_10, #Vector_20,#Vector_24,#Vector_40,#Vector_46,#Vector_51,#Vector_30,#Vector_38{
+    animation: cuadros-1 .5s linear alternate-reverse infinite;
+}
+
 
 /*----Animacion del titulo - H1 -----*/
 @keyframes typing {
@@ -201,15 +264,6 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
     
 }
 
-
-
-.cont-title{
-    margin-top: 10rem;
-}
-
-.cont-title p {
-    max-width: 45rem;
-}
 
 /* Socials botones */
 .cont-socials-buttons{
