@@ -2,6 +2,6 @@
 
 Este es mi Porfolio Web personal donde encontrarás más información sobre mí y mis proyectos. 
 
-## Screenshots
+## Screenshot
 
 ![App Screenshot](https://sitesafemoi.github.io/porfolio-moi/img/me-web.png))
