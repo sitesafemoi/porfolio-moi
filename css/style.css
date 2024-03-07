@@ -104,16 +104,22 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
     position: absolute;
     top:0;
     z-index: -10;
-    height: 250rem;
+    height: 260rem;
     width: 100%;
     background-color: rgb(3 7 18 / 1);
     background-image: radial-gradient(ellipse 80% 80% at 50% -20%,rgba(120,119,198,0.3),rgba(255,255,255,0));
     background-repeat: no-repeat;
+    background-attachment: fixed;
 } 
 
 @media screen and (max-width:760px) {   
     .black-background{
-        height: 350rem;
+        height: 370rem;
+    } 
+}
+@media screen and (max-width:498px) {   
+    .black-background{
+        height: 420rem;
     } 
 }
 /*Modo claro*//*
@@ -555,10 +561,19 @@ to {
     flex-wrap: wrap;
     gap: 1rem;
     border-radius: 2rem;
+    transition: transform .2s ease;
+}
+.cont-svgs:hover {
+    transform: rotate3d(1, 1, 0, 20deg);
+    box-shadow: rgba(5, 71, 17, 0.3) 30px 50px 25px -40px, rgba(5, 71, 17, 0.1) 0px 25px 30px 0px;    
 }
 .cont-svgs img{
     width: 11rem;
     margin-top: .5rem;
+    transition: transform .2s ease;
+}
+.cont-svgs img:hover{
+    transform: scale(1.05);
 }
 @media screen and (max-width:670px) {
     .cont-svgs {
@@ -685,11 +700,37 @@ to {
 }
 
 @keyframes rotation_9018 {
-0% {
-    transform: rotate(0deg);
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-100% {
-    transform: rotate(360deg);
+/*-- Footer --*/
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30rem;
+    flex-wrap: wrap;
 }
+
+.footer ul{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
 }
+.footer ul li,a{
+    color: #9CA3AF;
+}
+.footer ul li a:hover{
+    text-decoration: underline;
+}
+.footer span{
+    color: #9CA3AF;
+    font-weight: 200;
+}
+
