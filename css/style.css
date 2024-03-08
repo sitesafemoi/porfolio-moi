@@ -616,7 +616,13 @@ to {
     z-index: -10;
     border-radius: 15px;
 }   
+/* accesibilidad para personas con problemas de mareo */
 
+@media (prefers-reduced-motion: reduce){
+    .cont-svgs::before {
+        animation-duration: 8s;
+    }
+}
 /* -- Estilos a SOBRE MI -- */
 
 .cont-grid-sobre-mi{
