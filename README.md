@@ -4,4 +4,4 @@ Este es mi Porfolio Web personal donde encontrarás más información sobre mí 
 
 ## Screenshot
 
-![App Screenshot](https://sitesafemoi.github.io/porfolio-moi/img/me-web.png))
+![App Screenshot](https://sitesafemoi.github.io/porfolio-moi/img/me-web.png)
