@@ -27,6 +27,7 @@ body {
     --blanco-bordes:#E1E1E1;
     --negro: #000000;
     --negro-claro:#292929;
+    --azul-oscuro:#07182E;
 }
 
 
@@ -98,41 +99,79 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
 .color-primario{
     color: var(--primario);
 }
-/*Black background*/
+/*background*/
 
-.black-background{
-    position: absolute;
-    top:0;
-    z-index: -10;
-    height: 260rem;
-    width: 100%;
-    background-color: rgb(3 7 18 / 1);
-    background-image: radial-gradient(ellipse 80% 80% at 50% -20%,rgba(120,119,198,0.3),rgba(255,255,255,0));
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-} 
+/*Modo claro y osucuro*/
 
+@media (prefers-color-scheme: light) {
+    .black-background{
+        position: absolute;
+        top:0;
+        z-index: -10;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(249 250 251 / 1);
+        background-image: radial-gradient(ellipse 80% 80% at 50% -20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9));
+    }
+    :root {
+        --gris: #e1e1e1;
+        --blanco: #000000;
+        --blanco-oscuro:#f9f9f9;
+        --blanco-bordes:#E1E1E1;
+        --negro: #ffff;
+        --negro-claro:#292929;
+        --azul-oscuro:#898989;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    .black-background{
+        position: absolute;
+        top:0;
+        z-index: -10;
+        height: 260rem;
+        width: 100%;
+        background-color: rgb(3 7 18 / 1);
+        background-image: radial-gradient(ellipse 80% 80% at 50% -20%,rgba(120,119,198,0.3),rgba(255,255,255,0));
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    } 
+}
 @media screen and (max-width:760px) {   
     .black-background{
+        height: 370rem;
+    }
+    .white-background{
         height: 370rem;
     } 
 }
 @media screen and (max-width:498px) {   
     .black-background{
         height: 420rem;
-    } 
+    }
+    .white-background{
+        height: 420rem;
+    }   
 }
-/*Modo claro*//*
-.black-background{
-    position: absolute;
-    top:0;
-    z-index: -10;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgb(249 250 251 / 1);
-    background-image: radial-gradient(ellipse 80% 80% at 50% -20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9));
+
+/* clase toggle */
+
+.white-background{
+        position: absolute;
+        top:0;
+        z-index: -10;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(249 250 251 / 1);
+        background-image: radial-gradient(ellipse 80% 80% at 50% -20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9));
+   
+        --gris: #e1e1e1;
+        --blanco: #000000;
+        --blanco-oscuro:#f9f9f9;
+        --blanco-bordes:#E1E1E1;
+        --negro: #ffff;
+        --negro-claro:#292929;
+
 }
-*/
 
 /* Estilos header */
 
@@ -593,7 +632,7 @@ to {
 .cont-svgs {
     width: 100%;
     height: 24rem;
-    background: #07182E;
+    background: var(--azul-oscuro) ;
     margin-top: 2rem;
     position: relative;
     display: flex;
@@ -654,7 +693,7 @@ to {
 .cont-svgs::after {
     content: '';
     position: absolute;
-    background: #07182E;
+    background: var(--azul-oscuro);
     inset: 5px;
     z-index: -10;
     border-radius: 15px;
@@ -678,7 +717,7 @@ to {
 .card-img {
     width: 190px;
     height: 254px;
-    background: #171717;
+    background: var(--negro);
     display: flex;
     justify-content: center;
     align-items: center;
