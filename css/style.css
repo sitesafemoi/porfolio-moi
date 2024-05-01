@@ -153,7 +153,7 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
     align-items: center;
     justify-content: center;
     border-radius: 5rem;
-    width: 30rem;
+    width: 35rem;
     backdrop-filter: blur(1rem);
 }
 .header-nav ul{
@@ -170,6 +170,49 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
     color: var(--primario);
     transform: scale(1.02);
 }
+/* Toggle dark/light mode */
+.cont-toggle{
+    width: 2rem;
+    height: 2rem;
+}
+.toggle {
+    /* background-color: #fff; */
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 5rem 2rem rgba(0, 0, 0, .1);
+    line-height: 1;
+}
+
+.input {
+    display: none;
+}
+
+.icon {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    transition: transform 500ms;
+}
+
+.icon--moon {
+    transition-delay: 200ms;
+}
+
+.icon--sun {
+    transform: scale(0);
+}
+
+#switch:checked + .icon--moon {
+    transform: rotate(360deg) scale(0);
+}
+
+#switch:checked ~ .icon--sun {
+    transition-delay: 200ms;
+    transform: scale(1) rotate(360deg);
+}
 
 /* Estilos para los links internos */
 #proyectos, #sobre-mi, #habilidades{
@@ -182,7 +225,7 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
     margin-top: 10rem;
     display: grid;
     grid-template-columns: 60% 40%;
-    height: 50rem;
+    height: 43rem;
     gap: 1rem;
 }
 
