@@ -130,7 +130,7 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
         height: 100vh;
         width: 100vw;
         background-color: rgb(249 250 251 / 1);
-        background-image: radial-gradient(ellipse 80% 80% at 50% -20%,rgba(135, 134, 163, 0.5).5),rgba(255,255,255,0.9);
+        background-image: radial-gradient(ellipse 80% 80% at 50% -20%,rgb(142 170 213 / 50%),rgba(255,255,255,0.9));
     }
     body{
         --gris: #e1e1e1;
