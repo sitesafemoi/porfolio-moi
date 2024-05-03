@@ -159,6 +159,23 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
         background-repeat: no-repeat;
         background-attachment: fixed;
     } 
+    /*cambiar el logo a el sol, because is a light theme*/
+    .icon--sun {
+        transition-delay: 200ms;
+      }
+      
+      .icon--moon {
+        transform: scale(0);
+      }
+      
+      #switch:checked ~ .icon--sun {
+        transform: rotate(360deg) scale(0);
+      }
+      
+      #switch:checked + .icon--moon {
+        transition-delay: 200ms;
+        transform: scale(1) rotate(360deg);
+      }
 }
 /*white background*/
 .white-background{
@@ -251,22 +268,24 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
     grid-row: 1 / 1;
     transition: transform 500ms;
 }
-
-.icon--moon {
-    transition-delay: 200ms;
-}
-
-.icon--sun {
-    transform: scale(0);
-}
-
-#switch:checked + .icon--moon {
-    transform: rotate(360deg) scale(0);
-}
-
-#switch:checked ~ .icon--sun {
-    transition-delay: 200ms;
-    transform: scale(1) rotate(360deg);
+/*empezar por la luna en dark mtheme*/
+@media (prefers-color-scheme: dark) {
+    .icon--moon {
+        transition-delay: 200ms;
+    }
+    
+    .icon--sun {
+        transform: scale(0);
+    }
+    
+    #switch:checked + .icon--moon {
+        transform: rotate(360deg) scale(0);
+    }
+    
+    #switch:checked ~ .icon--sun {
+        transition-delay: 200ms;
+        transform: scale(1) rotate(360deg);
+    }
 }
 
 /* Estilos para los links internos */
