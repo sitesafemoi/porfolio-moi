@@ -1,24 +1,10 @@
-// const toggle = document.getElementById(`switch`)
+const toggle = document.getElementById(`switch`)
+const backGrund = document.querySelector(`.BackGround`)
 
-// toggle.onchange = () => {
-//     const mode = this.checked ? "light" : "dark"
-//     document.documentElement.style.setProperty(`color-scheme`, mode)
-// }
-
-// const backGrund = document.querySelector(`.BackGround`)
-
-// var lightMode
-
-//  toggle.addEventListener(`change`, () => {
+toggle.addEventListener(`change`, () => {
     
-//      if(lightMode){
-//          backGrund.classList.remove(`white-background`) 
-//          backGrund.classList.add(`black-background`)
-         
-//      }else{
-//         backGrund.classList.remove(`black-background`) 
-//         backGrund.classList.add(`white-background`)
-//         return lightMode = false;
-//      }
-
-// })
+        document.body.classList.toggle(`light-theme`)
+        backGrund.classList.toggle(`black-background`)
+        backGrund.classList.toggle(`white-background`)
+   
+})

@@ -12,15 +12,6 @@ body {
     font-size: 1.6rem;
     line-height: 2;
     color: var(--blanco);
-}
-/*Variables*/
-:root {
-    --fuenteHeading: "Onest", sans-serif;
-    --fuenteParrafos: "Onest", sans-serif;
-    --primario:#7CEB5D;
-    --gradient:#8EE84D;
-    --secundario:rgb(161, 255, 20);
-    --azul:#00679C;
     --gris: #e1e1e1;
     --blanco: #ffffff;
     --blanco-oscuro:#f9f9f9;
@@ -29,7 +20,24 @@ body {
     --negro-claro:#292929;
     --azul-oscuro:#07182E;
 }
-
+/*Variables generales*/
+:root {
+    --fuenteHeading: "Onest", sans-serif;
+    --fuenteParrafos: "Onest", sans-serif;
+    --primario:#7CEB5D;
+    --gradient:#8EE84D;
+    --secundario:rgb(161, 255, 20);
+    --azul:#00679C;
+}
+body.light-theme{
+    --gris: #e1e1e1;
+    --blanco: #000000;
+    --blanco-oscuro:#f9f9f9;
+    --blanco-bordes:#E1E1E1;
+    --negro: #ffff;
+    --negro-claro:#292929;
+    --azul-oscuro:#898989;
+}
 /** Globales **/
 a {
     text-decoration: none;
@@ -101,7 +109,17 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
 /*background*/
 
 /*Modo claro y osucuro*/
-
+.black-background{
+    position: absolute;
+    top:0;
+    z-index: -10;
+    height: 260rem;
+    width: 100%;
+    background-color: rgb(3 7 18 / 1);
+    background-image: radial-gradient(ellipse 80% 80% at 50% -20%,rgba(120,119,198,0.3),rgba(255,255,255,0));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} 
 @media (prefers-color-scheme: light) {
     .black-background{
         position: absolute;
@@ -110,9 +128,9 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
         height: 100vh;
         width: 100vw;
         background-color: rgb(249 250 251 / 1);
-        background-image: radial-gradient(ellipse 80% 80% at 50% -20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9));
+        background-image: radial-gradient(ellipse 80% 80% at 50% -20%,rgba(135, 134, 163, 0.5).5),rgba(255,255,255,0.9);
     }
-    :root {
+    body{
         --gris: #e1e1e1;
         --blanco: #000000;
         --blanco-oscuro:#f9f9f9;
@@ -121,9 +139,16 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
         --negro-claro:#292929;
         --azul-oscuro:#898989;
     }
-}
-@media (prefers-color-scheme: dark) {
-    .black-background{
+    body.dark-theme{
+        --gris: #e1e1e1;
+        --blanco: #ffffff;
+        --blanco-oscuro:#f9f9f9;
+        --blanco-bordes:#E1E1E1;
+        --negro: #000000;
+        --negro-claro:#292929;
+        --azul-oscuro:#07182E;
+    }
+    .black-background-dark{
         position: absolute;
         top:0;
         z-index: -10;
@@ -135,6 +160,18 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
         background-attachment: fixed;
     } 
 }
+/*white background*/
+.white-background{
+    position: absolute;
+    top:0;
+    z-index: -10;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(249 250 251 / 1);
+    background-image: radial-gradient(ellipse 80% 80% at 50% -20%,rgb(142 170 213 / 50%),rgba(255,255,255,0.9));
+}
+
+
 @media screen and (max-width:760px) {   
     .black-background{
         height: 370rem;
@@ -150,26 +187,6 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
     .white-background{
         height: 420rem;
     }   
-}
-
-/* clase toggle */
-
-.white-background{
-        position: absolute;
-        top:0;
-        z-index: -10;
-        height: 100vh;
-        width: 100vw;
-        background-color: rgb(249 250 251 / 1);
-        background-image: radial-gradient(ellipse 80% 80% at 50% -20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9));
-   
-        --gris: #e1e1e1;
-        --blanco: #000000;
-        --blanco-oscuro:#f9f9f9;
-        --blanco-bordes:#E1E1E1;
-        --negro: #ffff;
-        --negro-claro:#292929;
-
 }
 
 /* Estilos header */
