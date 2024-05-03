@@ -19,6 +19,7 @@ body {
     --negro: #000000;
     --negro-claro:#292929;
     --azul-oscuro:#07182E;
+    --MoonAndSun:#ffffff;
 }
 /*Variables generales*/
 :root {
@@ -37,6 +38,7 @@ body.light-theme{
     --negro: #ffff;
     --negro-claro:#292929;
     --azul-oscuro:#898989;
+    --MoonAndSun:#fad500;
 }
 /** Globales **/
 a {
@@ -138,6 +140,7 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
         --negro: #ffff;
         --negro-claro:#292929;
         --azul-oscuro:#898989;
+        --MoonAndSun:#fad500;
     }
     body.dark-theme{
         --gris: #e1e1e1;
@@ -162,6 +165,7 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
     /*cambiar el logo a el sol, because is a light theme*/
     .icon--sun {
         transition-delay: 200ms;
+        color:var(--MoonAndSun);
       }
       
       .icon--moon {
@@ -276,6 +280,7 @@ h1::selection,h2::selection,h4::selection,h3::selection,p::selection,strong::sel
     
     .icon--sun {
         transform: scale(0);
+        color:var(--MoonAndSun);
     }
     
     #switch:checked + .icon--moon {
